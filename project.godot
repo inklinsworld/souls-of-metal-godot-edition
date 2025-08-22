@@ -16,3 +16,13 @@ run/main_scene="uid://y0sv0jbg2p80"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://66cvkbm623s3"
 config/icon="uid://66cvkbm623s3"
+
+[audio]
+
+buses/default_bus_layout="uid://bo6o2jvh6vdnt"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
