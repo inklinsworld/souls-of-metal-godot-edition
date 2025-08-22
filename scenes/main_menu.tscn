@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://y0sv0jbg2p80"]
+[gd_scene load_steps=7 format=3 uid="uid://y0sv0jbg2p80"]
 
 [ext_resource type="Script" uid="uid://xw76jkmw533g" path="res://scripts/control.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://pcqsb1jhdiil" path="res://art/menu.png" id="2_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://66cvkbm623s3" path="res://art/logo.png" id="3_glbon"]
 [ext_resource type="FontFile" uid="uid://bajhk8ivivhpe" path="res://art/font.ttf" id="3_jix8l"]
+[ext_resource type="AudioStream" uid="uid://cj5cgfgvlqnjb" path="res://music/Katyusha.mp3" id="5_8ln24"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
 font = ExtResource("3_jix8l")
@@ -72,7 +73,29 @@ text = "volume (NON FUNCTIONAL)"
 
 [node name="HSlider" type="HSlider" parent="settings"]
 layout_mode = 2
+value = 100.0
+
+[node name="Control2" type="Control" parent="settings"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="settings"]
+layout_mode = 2
+text = "mute all audio"
+
+[node name="Control3" type="Control" parent="settings"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="settings"]
+layout_mode = 2
+text = "back"
+
+[node name="Katyusha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8ln24")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="base_menu/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="base_menu/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="value_changed" from="settings/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="settings/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="settings/Button" to="." method="_on_button_pressed"]
