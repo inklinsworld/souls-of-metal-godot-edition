@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://y0sv0jbg2p80"]
+
+[ext_resource type="Script" uid="uid://xw76jkmw533g" path="res://scripts/control.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://pcqsb1jhdiil" path="res://art/menu.png" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://66cvkbm623s3" path="res://art/logo.png" id="3_glbon"]
+[ext_resource type="FontFile" uid="uid://bajhk8ivivhpe" path="res://art/font.ttf" id="3_jix8l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
+font = ExtResource("3_jix8l")
+font_size = 32
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(568, 274)
+texture = ExtResource("2_fu7sn")
+
+[node name="base_menu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Logo" type="Sprite2D" parent="base_menu"]
+position = Vector2(972, 180)
+texture = ExtResource("3_glbon")
+
+[node name="Label" type="Label" parent="base_menu"]
+layout_mode = 2
+text = "SOULS OF METAL"
+label_settings = SubResource("LabelSettings_7vrkn")
+
+[node name="Button" type="Button" parent="base_menu"]
+layout_mode = 2
+text = "Play (NON FUNCTIONAL)"
+
+[node name="Button2" type="Button" parent="base_menu"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Button4" type="Button" parent="base_menu"]
+layout_mode = 2
+text = "Mods (NON FUNCTIONAL)"
+
+[node name="Button3" type="Button" parent="base_menu"]
+layout_mode = 2
+text = "Exit"
+
+[node name="settings" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="settings"]
+layout_mode = 2
+text = "SETTINGS"
+label_settings = SubResource("LabelSettings_7vrkn")
+
+[node name="Control" type="Control" parent="settings"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="settings"]
+layout_mode = 2
+text = "volume (NON FUNCTIONAL)"
+
+[node name="HSlider" type="HSlider" parent="settings"]
+layout_mode = 2
+
+[connection signal="pressed" from="base_menu/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="base_menu/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="value_changed" from="settings/HSlider" to="." method="_on_h_slider_value_changed"]

@@ -1,0 +1,18 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Souls of Metal"
+config/version="PRE_APH_1"
+run/main_scene="uid://y0sv0jbg2p80"
+config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/image="uid://66cvkbm623s3"
+config/icon="uid://66cvkbm623s3"
