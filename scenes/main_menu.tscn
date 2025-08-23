@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://y0sv0jbg2p80"]
+[gd_scene load_steps=7 format=3 uid="uid://y0sv0jbg2p80"]
 
 [ext_resource type="Script" uid="uid://b8qe6naj1r1lf" path="res://scripts/control.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://pcqsb1jhdiil" path="res://art/menu.png" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://66cvkbm623s3" path="res://art/logo.png" id="3_8ln24"]
+[ext_resource type="Script" uid="uid://337dqy2taqju" path="res://scripts/modding.gd" id="3_rtw2f"]
 [ext_resource type="Script" uid="uid://bv8iohfd3yxy0" path="res://scripts/volume_slider.gd" id="5_rtw2f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
@@ -25,6 +26,7 @@ texture = ExtResource("2_wu84c")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("3_rtw2f")
 
 [node name="Logo" type="Sprite2D" parent="base_menu"]
 position = Vector2(972, 180)
