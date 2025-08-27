@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c37t6u4gtl2oe"]
+
+[ext_resource type="Texture2D" uid="uid://bbd6lcui0037w" path="res://art/map.png" id="1_ckf6e"]
+[ext_resource type="Script" uid="uid://bm75mo41533kg" path="res://scripts/camera_controller.gd" id="2_pc67b"]
+
+[node name="MapTestScene" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_ckf6e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_pc67b")

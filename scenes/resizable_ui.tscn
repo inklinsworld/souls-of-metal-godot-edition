@@ -1,0 +1,139 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjw2skvxdnswh"]
+
+[ext_resource type="Script" uid="uid://gm0r76kr7sak" path="res://scripts/ui/window.gd" id="1_icoh6"]
+
+[node name="ResizableUi" type="Control" node_paths=PackedStringArray("control_node", "rect")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icoh6")
+control_node = NodePath("PanelContainer")
+rect = NodePath("ReferenceRect")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 152.0
+offset_bottom = 64.0
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 1"
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 2"
+
+[node name="Panel2" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 3"
+
+[node name="Panel3" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 4"
+
+[node name="Panel4" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 5"
+
+[node name="Panel5" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 6"
+
+[node name="Panel6" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 7"
+
+[node name="Panel7" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 8"
+
+[node name="Panel8" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 9"
+
+[node name="Panel9" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 10"
+
+[node name="Panel10" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button11" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 11"
+
+[node name="Panel11" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="Button12" type="Button" parent="PanelContainer"]
+layout_mode = 2
+text = "ABCDEFGHIJK 12"
+
+[node name="Panel12" type="Panel" parent="PanelContainer"]
+custom_minimum_size = Vector2(52, 43)
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 271.0
+offset_bottom = 40.0
+item_count = 5
+popup/item_0/text = "Vertical"
+popup/item_0/id = 0
+popup/item_1/text = "Horizontal"
+popup/item_1/id = 1
+popup/item_2/text = "Center"
+popup/item_2/id = 2
+popup/item_3/text = "Grid"
+popup/item_3/id = 3
+popup/item_4/text = "Panel"
+popup/item_4/id = 4
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 512.0
+
+[connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]

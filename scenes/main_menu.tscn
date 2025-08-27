@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://b8qe6naj1r1lf" path="res://scripts/control.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://pcqsb1jhdiil" path="res://art/menu.png" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://66cvkbm623s3" path="res://art/logo.png" id="3_8ln24"]
-[ext_resource type="Script" uid="uid://337dqy2taqju" path="res://scripts/modding.gd" id="3_rtw2f"]
-[ext_resource type="Script" uid="uid://bv8iohfd3yxy0" path="res://scripts/volume_slider.gd" id="5_rtw2f"]
+[ext_resource type="Script" uid="uid://337dqy2taqju" path="res://scripts/modding/modding.gd" id="3_rtw2f"]
+[ext_resource type="Script" uid="uid://bv8iohfd3yxy0" path="res://scripts/volume_controller.gd" id="5_rtw2f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
 font_size = 32
