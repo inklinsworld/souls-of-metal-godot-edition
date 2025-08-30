@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://3jub5vanx58b"]
+
+[ext_resource type="Script" uid="uid://bgjeah6ua4aki" path="res://scenes/province.gd" id="1_hwbyu"]
+
+[node name="province_test" type="Area2D"]
+script = ExtResource("1_hwbyu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, -20, 18.4191, -7.30978, 26.3497, 2.48688, 25.997, 4.93663, 23.7915, 6.84453, 9.08894, 13.2166, 0.22531, 13.2166, -4, 15, -9.57135, 16.0156, -15, 11, -24, -7, -17, -15)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0.552941, 0.290196, 0.368627)
+polygon = PackedVector2Array(2, -20, 18.4191, -7.30978, 26.3497, 2.48688, 25.997, 4.93663, 23.7915, 6.84453, 9.08894, 13.2166, 0.22531, 13.2166, -4, 15, -9.57135, 16.0156, -15, 11, -24, -7, -17, -15)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
