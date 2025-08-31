@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://y0sv0jbg2p80"]
+[gd_scene load_steps=11 format=3 uid="uid://y0sv0jbg2p80"]
 
 [ext_resource type="Script" uid="uid://b8qe6naj1r1lf" path="res://scripts/control.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://pcqsb1jhdiil" path="res://art/menu.png" id="2_wu84c"]
@@ -17,6 +17,9 @@ stream_0/stream = ExtResource("6_rtw2f")
 stream_0/weight = 20.0
 stream_1/stream = ExtResource("7_oa1go")
 stream_1/weight = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_oa1go"]
+font_color = Color(1, 1, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -48,7 +51,7 @@ label_settings = SubResource("LabelSettings_7vrkn")
 
 [node name="Button" type="Button" parent="base_menu"]
 layout_mode = 2
-text = "Play (NON FUNCTIONAL)"
+text = "Play"
 
 [node name="Button2" type="Button" parent="base_menu"]
 layout_mode = 2
@@ -114,6 +117,10 @@ text = "mute all audio"
 [node name="divider4" type="Control" parent="settings"]
 layout_mode = 2
 
+[node name="CheckBox" type="CheckBox" parent="settings"]
+layout_mode = 2
+text = "debug mode"
+
 [node name="Button" type="Button" parent="settings"]
 layout_mode = 2
 text = "back"
@@ -123,9 +130,19 @@ stream = SubResource("AudioStreamRandomizer_tbmy8")
 autoplay = true
 bus = &"Music"
 
+[node name="splash" type="Label" parent="."]
+layout_mode = 2
+offset_left = 268.0
+offset_top = -3.0
+offset_right = 425.0
+offset_bottom = 20.0
+rotation = 0.329771
+label_settings = SubResource("LabelSettings_oa1go")
+
 [connection signal="pressed" from="base_menu/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="base_menu/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="value_changed" from="settings/mastervol" to="settings/mastervol" method="set_volume_linear"]
 [connection signal="value_changed" from="settings/musicvol" to="settings/musicvol" method="set_volume_linear"]
 [connection signal="toggled" from="settings/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="settings/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="pressed" from="settings/Button" to="." method="_on_button_pressed"]
