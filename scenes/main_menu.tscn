@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://y0sv0jbg2p80"]
+[gd_scene load_steps=10 format=3 uid="uid://y0sv0jbg2p80"]
 
 [ext_resource type="Script" uid="uid://b8qe6naj1r1lf" path="res://scripts/control.gd" id="1_06t4h"]
 [ext_resource type="Texture2D" uid="uid://pcqsb1jhdiil" path="res://art/menu.png" id="2_wu84c"]
@@ -6,9 +6,17 @@
 [ext_resource type="Script" uid="uid://337dqy2taqju" path="res://scripts/modding.gd" id="3_rtw2f"]
 [ext_resource type="Script" uid="uid://bv8iohfd3yxy0" path="res://scripts/volume_slider.gd" id="5_rtw2f"]
 [ext_resource type="AudioStream" uid="uid://cj5cgfgvlqnjb" path="res://music/Katyusha.mp3" id="6_rtw2f"]
+[ext_resource type="AudioStream" uid="uid://bsqbug55nmd6x" path="res://music/FDJ.mp3" id="7_oa1go"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vrkn"]
 font_size = 32
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tbmy8"]
+streams_count = 2
+stream_0/stream = ExtResource("6_rtw2f")
+stream_0/weight = 20.0
+stream_1/stream = ExtResource("7_oa1go")
+stream_1/weight = 5.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -111,7 +119,7 @@ layout_mode = 2
 text = "back"
 
 [node name="Katyusha" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_rtw2f")
+stream = SubResource("AudioStreamRandomizer_tbmy8")
 autoplay = true
 bus = &"Music"
 

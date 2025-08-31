@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://0dwbb7eovoae"]
+[gd_scene load_steps=3 format=3 uid="uid://0dwbb7eovoae"]
 
 [ext_resource type="Script" uid="uid://bgjeah6ua4aki" path="res://scripts/province.gd" id="1_hwbyu"]
+[ext_resource type="Script" uid="uid://byan6w1qr3q5q" path="res://scripts/mousetrack_tooltip.gd" id="2_ipo1e"]
 
-[node name="province_test" type="Area2D"]
+[node name="province_test" type="Area2D" node_paths=PackedStringArray("label")]
 script = ExtResource("1_hwbyu")
+label = NodePath("Label")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(2, -20, 18.4191, -7.30978, 26.3497, 2.48688, 25.997, 4.93663, 23.7915, 6.84453, 9.08894, 13.2166, 0.22531, 13.2166, -4, 15, -9.57135, 16.0156, -15, 11, -24, -7, -17, -15)
@@ -25,6 +27,7 @@ offset_left = 34.0
 offset_top = -21.0
 offset_right = 74.0
 offset_bottom = 2.0
+script = ExtResource("2_ipo1e")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
