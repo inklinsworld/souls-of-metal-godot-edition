@@ -1,8 +1,6 @@
-class_name province
 extends Area2D
 
 var is_in_area = false
-var tooltip = false
 var city_level = 0
 var factory_count = 0
 @onready var line_2d: Line2D = $highlight_line
@@ -11,26 +9,21 @@ var factory_count = 0
 
 func _on_mouse_entered() -> void:
 	is_in_area = true
-
+	label.show()
 
 func _on_mouse_exited() -> void:
 	is_in_area = false
-	tooltip = false
+	line_2d.hide()
+	label.hide()
 
 func _process(delta):
 	if is_in_area:
-		tooltip = true
-		if Input.is_action_just_pressed("select"):
-			line_2d.show()
-	else:
-		line_2d.hide()
-	if tooltip:
 		label.text = "city level: " + str(city_level) + "
 		factories: " + str(factory_count)
-		label.show()
-	else:
-		label.hide()
-		label.text = ""
+
+func _unhandled_input(event: InputEvent) -> void:
+	if is_in_area and event is InputEventMouseButton and Input.is_action_pressed("select"):
+		line_2d.show()
 
 func _physics_process(delta):
 	for city in range(0, city_level):
