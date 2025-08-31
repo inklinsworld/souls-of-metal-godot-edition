@@ -3,7 +3,7 @@ extends Control
 @onready var base_menu: VBoxContainer = $base_menu
 @onready var settings: VBoxContainer = $settings
 @onready var splash: Label = $splash
-var splash_text = ["we were a shitshow!", "pol's mum is fat!", "made primarily by Sockmit!", "Provinces by Inklin", "the founder abandoned us so we picked up the scraps!", "bow down to supreme leader!", "Jayjay is a legend", "also try HOI4!"]
+var splash_text = ["we were a shitshow!", "pol's mum is fat!", "made primarily by Sockmit!", "Provinces by Inklin", "the founder abandoned us so we picked up the scraps!", "bow down to supreme leader!", "Jayjay is a legend", "also try HOI4!", "stand by for Whatsapp's arrival", "Imma stick around with (allo) Rus"]
 
 func _ready():
 	base_menu.show()
