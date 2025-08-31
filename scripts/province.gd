@@ -1,3 +1,4 @@
+class_name province
 extends Area2D
 
 var is_in_area = false
