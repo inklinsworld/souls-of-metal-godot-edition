@@ -16,7 +16,7 @@ func _on_mouse_exited() -> void:
 	line_2d.hide()
 	label.hide()
 
-func _process(delta):
+func _process(_delta):
 	if is_in_area:
 		label.text = "city level: " + str(city_level) + "
 		factories: " + str(factory_count)
@@ -25,6 +25,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_in_area and event is InputEventMouseButton and Input.is_action_pressed("select"):
 		line_2d.show()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	for city in range(0, city_level):
 		factory_count += 2
