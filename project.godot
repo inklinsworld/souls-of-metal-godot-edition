@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="Souls of Metal"
-config/version="PRE_APH_1"
 run/main_scene="uid://y0sv0jbg2p80"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://66cvkbm623s3"
